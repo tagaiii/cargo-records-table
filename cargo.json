@@ -1,0 +1,163 @@
+[
+    {
+      "id": "CARGO001",
+      "name": "Строительные материалы",
+      "status": "В пути",
+      "origin": "Москва",
+      "destination": "Казань",
+      "departureDate": "2024-11-24"
+    },
+    {
+      "id": "CARGO002",
+      "name": "Хрупкий груз",
+      "status": "В ожидании отправки",
+      "origin": "Санкт-Петербург",
+      "destination": "Екатеринбург",
+      "departureDate": "2024-11-26"
+    },
+    {
+      "id": "CARGO003",
+      "name": "Продукты питания",
+      "status": "Доставлен",
+      "origin": "Самара",
+      "destination": "Новосибирск",
+      "departureDate": "2024-11-20"
+    },
+    {
+      "id": "CARGO004",
+      "name": "Техника",
+      "status": "В пути",
+      "origin": "Челябинск",
+      "destination": "Красноярск",
+      "departureDate": "2024-11-28"
+    },
+    {
+      "id": "CARGO005",
+      "name": "Мебель",
+      "status": "В ожидании отправки",
+      "origin": "Ростов-на-Дону",
+      "destination": "Уфа",
+      "departureDate": "2024-11-23"
+    },
+    {
+      "id": "CARGO006",
+      "name": "Медицинские препараты",
+      "status": "В пути",
+      "origin": "Новосибирск",
+      "destination": "Москва",
+      "departureDate": "2024-11-29"
+    },
+    {
+      "id": "CARGO007",
+      "name": "Одежда",
+      "status": "Доставлен",
+      "origin": "Красноярск",
+      "destination": "Санкт-Петербург",
+      "departureDate": "2024-11-22"
+    },
+    {
+      "id": "CARGO008",
+      "name": "Книги",
+      "status": "В пути",
+      "origin": "Уфа",
+      "destination": "Екатеринбург",
+      "departureDate": "2024-11-30"
+    },
+    {
+      "id": "CARGO009",
+      "name": "Автозапчасти",
+      "status": "В ожидании отправки",
+      "origin": "Казань",
+      "destination": "Ростов-на-Дону",
+      "departureDate": "2024-11-21"
+    },
+    {
+      "id": "CARGO010",
+      "name": "Спортивный инвентарь",
+      "status": "В пути",
+      "origin": "Москва",
+      "destination": "Самара",
+      "departureDate": "2024-11-27"
+    },
+    {
+      "id": "CARGO011",
+      "name": "Строительные материалы",
+      "status": "Доставлен",
+      "origin": "Санкт-Петербург",
+      "destination": "Новосибирск",
+      "departureDate": "2024-11-25"
+    },
+    {
+      "id": "CARGO012",
+      "name": "Хрупкий груз",
+      "status": "В ожидании отправки",
+      "origin": "Челябинск",
+      "destination": "Казань",
+      "departureDate": "2024-11-24"
+    },
+    {
+      "id": "CARGO013",
+      "name": "Продукты питания",
+      "status": "В пути",
+      "origin": "Ростов-на-Дону",
+      "destination": "Красноярск",
+      "departureDate": "2024-11-26"
+    },
+    {
+      "id": "CARGO014",
+      "name": "Техника",
+      "status": "Доставлен",
+      "origin": "Уфа",
+      "destination": "Екатеринбург",
+      "departureDate": "2024-11-28"
+    },
+    {
+      "id": "CARGO015",
+      "name": "Мебель",
+      "status": "В ожидании отправки",
+      "origin": "Новосибирск",
+      "destination": "Москва",
+      "departureDate": "2024-11-30"
+    },
+    {
+      "id": "CARGO016",
+      "name": "Медицинские препараты",
+      "status": "В пути",
+      "origin": "Казань",
+      "destination": "Санкт-Петербург",
+      "departureDate": "2024-11-23"
+    },
+    {
+      "id": "CARGO017",
+      "name": "Одежда",
+      "status": "В ожидании отправки",
+      "origin": "Самара",
+      "destination": "Ростов-на-Дону",
+      "departureDate": "2024-11-27"
+    },
+    {
+      "id": "CARGO018",
+      "name": "Книги",
+      "status": "Доставлен",
+      "origin": "Москва",
+      "destination": "Красноярск",
+      "departureDate": "2024-11-29"
+    },
+    {
+      "id": "CARGO019",
+      "name": "Автозапчасти",
+      "status": "В пути",
+      "origin": "Екатеринбург",
+      "destination": "Челябинск",
+      "departureDate": "2024-11-22"
+    },
+    {
+      "id": "CARGO020",
+      "name": "Спортивный инвентарь",
+      "status": "В ожидании отправки",
+      "origin": "Санкт-Петербург",
+      "destination": "Уфа",
+      "departureDate": "2024-11-21"
+    }
+  ]
+  
