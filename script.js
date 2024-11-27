@@ -21,16 +21,16 @@ const createStatusSelect = (selectedStatus, cargoId) => {
     select.dataset.cargoId = cargoId
 
     const statuses = [
-        { value: 'pending', text: 'В ожидании отправки', class: 'status-pending' },
-        { value: 'sent', text: 'В пути', class: 'status-sent' },
-        { value: 'delivered', text: 'Доставлен', class: 'status-delivered' }
+        { value: 'В ожидании отправки', class: 'status-pending' },
+        { value: 'В пути', class: 'status-sent' },
+        { value: 'Доставлен', class: 'status-delivered' }
     ]
 
     statuses.forEach(status => {
         const option = document.createElement('option')
         option.value = status.value
-        option.textContent = status.text
-        if (status.text === selectedStatus) {
+        option.textContent = status.value
+        if (status.value === selectedStatus) {
             option.selected = true
             select.classList.add(status.class)
         }
@@ -42,11 +42,11 @@ const createStatusSelect = (selectedStatus, cargoId) => {
 
 const updateStatusClass = (select, status) => {
     select.className = 'form-select'
-    if (status === 'pending') {
+    if (status === 'В ожидании отправки') {
       select.classList.add('status-pending')
-    } else if (status === 'sent') {
+    } else if (status === 'В пути') {
       select.classList.add('status-sent')
-    } else if (status === 'delivered') {
+    } else if (status === 'Доставлен') {
       select.classList.add('status-delivered')
     }
   }
@@ -70,12 +70,21 @@ const createTableRow = (cargo) => {
         updateStatusClass(statusSelect, event.target.value)
 
         const id = event.target.dataset.cargoId
-        const selectedStatus = event.target.options[event.target.selectedIndex].text
+        const selectedStatus = event.target.value
         const cargoIndex = cargoList.findIndex((cargo) => cargo.id === id)
-        cargoList[cargoIndex].status = selectedStatus
-        localStorage.setItem('cargoList', JSON.stringify(cargoList))
-    })
 
+        const today = new Date().setHours(0, 0, 0, 0)
+        const cargoDepartureDate = new Date(cargoList[cargoIndex].departureDate)
+        if (selectedStatus === 'Доставлен' && today < cargoDepartureDate) {
+            alert('Ошибка! Груз не может быть еще доставлен!')
+            event.target.value = cargoList[cargoIndex].status
+            updateStatusClass(event.target, cargoList[cargoIndex].status)
+            return
+        } else {
+            cargoList[cargoIndex].status = selectedStatus
+            localStorage.setItem('cargoList', JSON.stringify(cargoList))
+        }
+    })
     const originCell = document.createElement('td')
     originCell.textContent = cargo.origin
 
@@ -96,9 +105,18 @@ const createTableRow = (cargo) => {
 }
 
 export const renderTable = (cargoList) => {
+    table.innerHTML = ''
     cargoList.forEach(cargo => {
         const row = createTableRow(cargo)
         table.appendChild(row)
     });
 }
-renderTable(cargoList.toReversed())
+
+export const sortCargoList = (a, b) => {
+    if (a.id > b.id) {
+        return -1
+    } else {
+        return 1
+    }
+}
+renderTable(cargoList.sort(sortCargoList))
